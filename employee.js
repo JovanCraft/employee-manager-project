@@ -6,11 +6,16 @@ class Employee {
         this.salary = salary;
         this.title = title;
         this.manager = manager;
-        if(manager){
+        if (manager) {
             manager.addEmployee(this)
             //console.log(this)
         }
 
+    }
+
+    calculateBonus(multiplier) {
+        let bonus = (this.salary) * multiplier
+        return bonus;
     }
 
 }
